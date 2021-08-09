@@ -54,24 +54,14 @@ It will serve you will not to rely on this until you have tried everything.
 ```
 // TODO: Implement this function
 function startGame() {
-  // Invoke shuffle function and store in variable
   const shuffledDeck = shuffle(deckCards);
-  // Implement a for loop on the shuffledDeck array
   for( let i = 0; i < shuffledDeck.length; i++) {
-    // Create the <td> tags and assign it to a variable called tdTag
     const tdTag = document.createElement('td');
-    // Give tdTag Element a class of card
     tdTag.classList.add('card');
-    // Create the <img> tag and assign it to an addImage variable
     const addImage = document.createElement('img');
-    // make the addImage a child of the tdTag
     tdTag.appendChild(addImage);
-    // Set the addImage element src path with the shuffled deck
-    // TODO: replace the REPLACE ME string with the element in the shuffledDeck array at index i
     addImage.setAttribute('src', 'img/' + shuffledDeck[i]);
-    // Add an alt tag to the addImage element
     addImage.setAttribute('alt', 'image of vault boy from fallout');
-    // make the tdTag element a child of the deck element
     deck.appendChild(tdTag);
   }
 }
